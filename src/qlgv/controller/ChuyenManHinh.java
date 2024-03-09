@@ -63,6 +63,8 @@ public class ChuyenManHinh {
             this.jpnItem = jpnItem;
             this.jlbItem = jlbItem;
         }
+
+
         
                 
 
