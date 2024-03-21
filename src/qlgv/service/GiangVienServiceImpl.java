@@ -31,5 +31,10 @@ public class GiangVienServiceImpl implements GiangVienService{
     public List<GiangVien> getList() {
         return giangvienDAO.getList();
     }
+
+    @Override
+    public int createrOrUpdate(GiangVien giangVien) {
+        return giangvienDAO.createOrUpdate(giangVien);
+    }
     
 }

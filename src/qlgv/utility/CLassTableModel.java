@@ -36,8 +36,9 @@ public class CLassTableModel {
             for (int i = 0; i < rows; i++) {
                 GiangVien giangVien = listItem.get(i);
                 obj = new  Object[columns];
-                obj[0] = giangVien.getMa_giang_vien();
-                obj[1] = (i+1);
+                obj[0] = (i+1);
+                obj[1] = giangVien.getMa_giang_vien();
+                
                 obj[2] = giangVien.getTen_giang_vien();
                 obj[3] = giangVien.getDia_chi();
                 obj[4] = giangVien.getTrinh_do();

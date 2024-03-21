@@ -3,11 +3,24 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/code%20java/QuanLyLuongGiangVien/src/qlgv/service/GiangVienServiceImpl.java</file>
-            <file>file:/D:/code%20java/QuanLyLuongGiangVien/src/qlgv/view/GiangVienJPanel.java</file>
+            <file>file:/D:/code%20java/QuanLyLuongGiangVien/src/qlgv/view/LuongGiangVienJPanel.java</file>
+            <file>file:/D:/code%20java/QuanLyLuongGiangVien/src/qlgv/dao/GiangVienDaoImpl.java</file>
+            <file>file:/D:/code%20java/QuanLyLuongGiangVien/src/qlgv/controller/TTGiangVienController.java</file>
             <file>file:/D:/code%20java/QuanLyLuongGiangVien/src/qlgv/utility/CLassTableModel.java</file>
-            <file>file:/D:/code%20java/QuanLyLuongGiangVien/src/qlgv/service/GiangVienService.java</file>
+            <file>file:/D:/code%20java/QuanLyLuongGiangVien/src/qlgv/view/TrangChuJPanel.java</file>
             <file>file:/D:/code%20java/QuanLyLuongGiangVien/src/qlgv/controller/GiangVienController.java</file>
+            <file>file:/D:/code%20java/QuanLyLuongGiangVien/src/qlgv/controller/ChuyenManHinh.java</file>
+            <file>file:/D:/code%20java/QuanLyLuongGiangVien/src/qlgv/service/GiangVienServiceImpl.java</file>
+            <file>file:/D:/code%20java/QuanLyLuongGiangVien/src/qlgv/model/MonHoc.java</file>
+            <file>file:/D:/code%20java/QuanLyLuongGiangVien/src/qlgv/bean/DanhMuccBean.java</file>
+            <file>file:/D:/code%20java/QuanLyLuongGiangVien/src/qlgv/dao/GiangVienDAO.java</file>
+            <file>file:/D:/code%20java/QuanLyLuongGiangVien/src/qlgv/view/MainJFrame.java</file>
+            <file>file:/D:/code%20java/QuanLyLuongGiangVien/src/qlgv/view/GiangVienJPanel.java</file>
+            <file>file:/D:/code%20java/QuanLyLuongGiangVien/src/qlgv/main/Main.java</file>
+            <file>file:/D:/code%20java/QuanLyLuongGiangVien/src/qlgv/service/GiangVienService.java</file>
+            <file>file:/D:/code%20java/QuanLyLuongGiangVien/src/qlgv/view/MonHocJPanel.java</file>
+            <file>file:/D:/code%20java/QuanLyLuongGiangVien/src/qlgv/dao/DBConnect.java</file>
+            <file>file:/D:/code%20java/QuanLyLuongGiangVien/src/qlgv/model/GiangVien.java</file>
         </group>
     </open-files>
 </project-private>

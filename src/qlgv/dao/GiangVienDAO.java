@@ -13,4 +13,5 @@ import qlgv.model.GiangVien;
  */
 public interface GiangVienDAO {
     public List<GiangVien> getList();
+    public int createOrUpdate(GiangVien giangVien);
 }

@@ -5,12 +5,12 @@ package qlgv.model;
  * @author minhq
  */
 public class GiangVien {
-    private int ma_giang_vien;
+    private  String ma_giang_vien;
     private String ten_giang_vien;
     private String dia_chi;
     private String trinh_do;
 
-    public GiangVien(int ma_giang_vien, String ten_giang_vien, String dia_chi, String trinh_do) {
+    public GiangVien(String ma_giang_vien, String ten_giang_vien, String dia_chi, String trinh_do) {
         this.ma_giang_vien = ma_giang_vien;
         this.ten_giang_vien = ten_giang_vien;
         this.dia_chi = dia_chi;
@@ -21,11 +21,11 @@ public class GiangVien {
        
     }
 
-    public int getMa_giang_vien() {
+    public String getMa_giang_vien() {
         return ma_giang_vien;
     }
 
-    public void setMa_giang_vien(int ma_giang_vien) {
+    public void setMa_giang_vien(String ma_giang_vien) {
         this.ma_giang_vien = ma_giang_vien;
     }
 

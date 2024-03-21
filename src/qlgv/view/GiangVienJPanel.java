@@ -19,6 +19,7 @@ public class GiangVienJPanel extends javax.swing.JPanel {
         initComponents();
         GiangVienController controller = new GiangVienController(jpnView, btnAdd, jtfSearch);
         controller.setDataToTable();
+        controller.setEvent();
     }
 
     /**

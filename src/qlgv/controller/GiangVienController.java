@@ -2,8 +2,11 @@
 package qlgv.controller;
 
 import java.awt.CardLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.List;
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -21,6 +24,7 @@ import qlgv.model.GiangVien;
 import qlgv.service.GiangVienServiceImpl;
 import qlgv.service.GiangVienService;
 import qlgv.utility.CLassTableModel;
+import qlgv.view.GiangVienJFrame;
 
 /**
  *
@@ -33,7 +37,7 @@ public class GiangVienController {
     
     private GiangVienService giangVienService = null;
     
-    private String[] listColumn = {"Mã Giảng Viên", "STT", "Họ và Tên","Địa Chỉ", "Trình Độ"};
+    private String[] listColumn = { "STT","Mã Giảng Viên", "Họ và Tên","Địa Chỉ", "Trình Độ"};
     
     private TableRowSorter<TableModel> rowSorter = null;
             
@@ -43,6 +47,10 @@ public class GiangVienController {
         this.jtfSearch = jtfSearch;
         
         this.giangVienService = new GiangVienServiceImpl();
+    }
+
+    public GiangVienController(JButton btnSubmit, JTextField jtfMaGiangVien, JTextField jtfHoTen) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 public void setDataToTable() {
@@ -78,6 +86,32 @@ public void setDataToTable() {
         public void changedUpdate(DocumentEvent e) {
         }
     });
+    
+    table.addMouseListener(new MouseAdapter(){
+        @Override
+        public void mouseClicked(MouseEvent e) {
+            if(e.getClickCount() == 2 && table.getSelectedRow() != -1){
+                DefaultTableModel model = (DefaultTableModel) table.getModel();
+                int selectedRowIndex = table.getSelectedRow();
+                selectedRowIndex = table.convertColumnIndexToModel(selectedRowIndex);
+                
+                
+                GiangVien giangVien = new GiangVien();
+                giangVien.setMa_giang_vien(model.getValueAt(selectedRowIndex, 1).toString());
+                giangVien.setTen_giang_vien(model.getValueAt(selectedRowIndex,2).toString());
+                giangVien.setTrinh_do(model.getValueAt(selectedRowIndex, 4).toString());
+                giangVien.setDia_chi(model.getValueAt(selectedRowIndex, 3).toString() != null ?
+                    model.getValueAt(selectedRowIndex, 3).toString() : "" );
+                
+                GiangVienJFrame frame = new GiangVienJFrame(giangVien);
+                frame.setTitle("Thông Tin Giảng Viên");
+                frame.setResizable(false);
+                frame.setLocationRelativeTo(null);
+                frame.setVisible(true);
+            }
+        }
+        
+    });
 
     table.getTableHeader().setFont(new Font("Arial", Font.BOLD, 14));
     table.getTableHeader().setPreferredSize(new Dimension(100, 50));
@@ -96,4 +130,31 @@ public void setDataToTable() {
     jpnView.repaint();
 }
 
+    public void setEvent(){
+        btnAdd.addMouseListener(new MouseAdapter(){
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                GiangVienJFrame frame = new GiangVienJFrame(new GiangVien());
+                frame.setTitle("Thông Tin Giảng Viên");
+                frame.setLocale(null);
+                frame.setResizable(false);
+                frame.setVisible(true);
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                btnAdd.setBackground(new Color(0,200,83));
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                btnAdd.setBackground(new Color(100,221,23));
+                
+            }
+            
+            
+        }); 
+    }
 }
+
+
